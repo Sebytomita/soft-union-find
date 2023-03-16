@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Reprezentarea mulțimilor disjuncte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./reprezentare-styles/reprezentare-styles.css">
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="title-header">
+      Reprezentarea mulțimilor disjuncte
+    </div>
+    <div class="menu-header">
+      <button class="button-menu-header-i" onclick="location.href='./Index.html'">Introducere</button>
+      <button class="button-menu-header-r" onclick="location.href='./Reprezentare.html'">Reprezentare</button>
+      <button class="button-menu-header-u" onclick="location.href='./Union.html'">Union</button>
+      <button class="button-menu-header-f" onclick="location.href='./Find.html'">Find</button>
+      <button class="button-menu-header-p" onclick="location.href='./Ponderare.html'">Ponderare</button>
+      <button class="button-menu-header-c" onclick="location.href='./Compresie.html'">Compresie</button>
+      <button class="button-menu-header-a" onclick="location.href='./Aplicatii.html'">Aplicații</button>
+    </div>
+  </div>
+  <div class="content">
+
+    <table>
+      <!--
+      <caption>Modalități de reprezentare a mulțimilor</caption>
+      -->
+      <thead>
+        <tr>
+          <th></th>
+          <th>vector sortat</th>
+          <th>vector de poziție</th>
+          <th>arbori cu rădăcină</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Find(x)</code></td>
+          <td>căutare binară în fiecare vector.</td>
+          <td><code>p[x]</code></td>
+          <td>rădăcina arborelui</td>
+        </tr>
+        <tr>
+          <td><code>Union(i,j)</code></td>
+          <td>concatenarea celor 2 vectori în care se află <code>i</code> si <code>j</code>,
+            sortarea acestuia şi ştergerea vectorului de lungime mai mică.</td>
+          <td>parcurgerea vectorului şi
+            modificarea elementelor pentru care <code>p[x]=j</code> în <code>p[x]=i</code>.</td>
+          <td>atribuirea celui de-al doilea nod rădăcina ca tată pe primul nod rădăcină.
+            <code>(tata[radj]=radi)</code>
+          </td>
+        </tr>
+        <tr>
+          <td>Complexitate <code>Find</code></td>
+          <td><code>n<span style="vertical-align: middle;">*</span>log<sub>2</sub>n</code></td>
+          <td><code>O(1)</code></td>
+          <td><code>O(log<sub>2</sub>n)</code></td>
+        </tr>
+        <tr>
+          <td>Complexitate <code>Union</code></td>
+          <td><code>n<span style="vertical-align: middle;">*</span>k</code> (<code>k</code>-nr elem vector)</td>
+          <td><code>O(k)</code></td>
+          <td><code>O(1)</code></td>
+        </tr>
+
+        <tr>
+          <td>Spatiu de stocare</td>
+          <td><code>n<sup>2</sup></code></td>
+          <td><code>k</code></td>
+          <td><code>n</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--
+    <p>
+      Modalități de reprezentare a mulțimilor: <br>
+      1. Fiecare mulțime va fi reprezentată ca un vector sortat: <br>
+      -Find(x) -> căutare binară în fiecare vector. <br>
+      -Union(i,j) -> concatenarea celor 2 vectori în care se află i si j, sortarea acestuia şi ştergerea
+      vectorului de lungime mai mică. <br>
+      Complexitate: <br>
+      Find(x) -> n*logn <br>
+      Union(i,j) -> n*k (k-nr elem vector) <br>
+      Spațiu de stocare: n^2 <br> <br>
+
+      2. Fiecare mulțime va fi reprezentatv cu ajutorul unui vector de poziție p[x]: <br>
+      -Find(x) -> p[x] <br>
+      -Union(i,j) -> parcurgerea vectorului şi modificarea elementelor pentru care p[x]=j în p[x]=i. <br>
+      Complexitate: <br>
+      Find(x) -> O(1) <br>
+      Union(i,j) -> O(k) <br>
+      Spațiu de stocare: k <br> <br>
+
+      3. Reprezentarea mulțimilor disjuncte se va realiza cu ajutorul arborilor cu rădăcină. Fiecare arbore reprezintă o
+      mulțime, iar fiecare nod din arbore un element al mulțimii. <br>
+      -Find(x) -> rădăcina arborelui <br>
+      -Union(i,j) -> atribuirea celui de-al doilea nod rădăcina ca tată pe primul nod rădăcină.<br>
+      Complexitate: <br>
+      Find(x) -> O(log n) <br>
+      Union(x) -> O(1)<br>
+      Spațiu de stocare: n <br>
+    </p>
+    -->
+
+</body>
+
+</html>

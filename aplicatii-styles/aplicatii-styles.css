@@ -1,0 +1,165 @@
+body {
+  font-family: Roboto, Arial;
+  margin: 0;
+  background-color: rgb(5, 5, 65);
+  zoom: 150%;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  body {
+    zoom: 70%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  body {
+    zoom: 80%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  body {
+    zoom: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  body {
+    zoom: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  body {
+    zoom: 110%;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  body {
+    zoom: 120%;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+  body {
+    zoom: 130%;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1800px) {
+  body {
+    zoom: 140%;
+  }
+}
+
+/* Styles for screens larger than 1600px */
+@media screen and (min-width: 1800px) {
+  body {
+    zoom: 150%;
+  }
+}
+
+.header {
+  margin: -1;
+  height: 55px;
+  border: 0;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: rgb(234, 187, 69);
+  /*box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);*/
+  padding-top: 10px;
+
+}
+
+.title-header {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: lightblue;
+}
+
+.menu-header {
+  height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button-menu-header-i,
+.button-menu-header-r,
+.button-menu-header-u,
+.button-menu-header-f,
+.button-menu-header-p,
+.button-menu-header-c,
+.button-menu-header-a {
+  margin-top: -1px;
+  font-size: 20px;
+  height: 40px;
+  width: fit-content;
+  border: 0px;
+  background-color: rgb(5, 5, 65);
+  color: lightblue;
+}
+
+.button-menu-header-a {
+  background-color: rgb(234, 187, 69);
+  color: rgb(2, 39, 72);
+}
+
+.button-menu-header-i:hover,
+.button-menu-header-r:hover,
+.button-menu-header-u:hover,
+.button-menu-header-f:hover,
+.button-menu-header-p:hover,
+.button-menu-header-c:hover {
+  background-color: rgb(234, 187, 69);
+  opacity: 0.75;
+  transition: background-color 0.15s;
+  color: rgb(2, 39, 72);
+}
+
+.content {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-pr {
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+  height: 130px;
+}
+
+.titlu-pr {
+  font-family: Roboto, Arial;
+  font-size: 30px;
+  color: white;
+  text-decoration: underline;
+  width: max-content;
+}
+
+.link-pr {
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: white;
+  width: 200px;
+}
+
+p {
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: white;
+}
+
+a {
+  color: rgb(234, 187, 69);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Reprezentarea mulțimilor disjuncte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index-styles/index-styles.css">
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="title-header">
+      Reprezentarea mulțimilor disjuncte
+    </div>
+    <div class="menu-header">
+      <button class="button-menu-header-i" onclick="location.href='./index.html'">Introducere</button>
+      <button class="button-menu-header-r" onclick="location.href='./Reprezentare.html'">Reprezentare</button>
+      <button class="button-menu-header-u" onclick="location.href='./Union.html'">Union</button>
+      <button class="button-menu-header-f" onclick="location.href='./Find.html'">Find</button>
+      <button class="button-menu-header-p" onclick="location.href='./Ponderare.html'">Ponderare</button>
+      <button class="button-menu-header-c" onclick="location.href='./Compresie.html'">Compresie</button>
+      <button class="button-menu-header-a" onclick="location.href='./Aplicatii.html'">Aplicații</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <p>
+      Enunț:<br>
+      <span class="tab"></span> Dată fiind o mulțime finită <code>U</code> si
+      <code>S={S<sub>1</sub>, S<sub>2</sub>, ... , S<sub>k</sub>}</code> o
+      <button class="partitie-popup" id="partitie-popup">partiție</button>
+      a mulțimii <code>U</code>, problema constă în a proiecta o
+      structură de date care să permită executarea
+      eficientă a următoarelor două operații fundamentale: <br>
+      -<code>Find(x)</code> determină mulțimea <code>S<sub>i</sub>&isin;S</code> căreia îi apartine elementul
+      <code>x,x&isin;U;</code> <br>
+      -<code>Union(S<sub>i</sub>,S<sub>j</sub>)</code> reuneşte mulțimea <code>S<sub>i</sub></code> cu mulțimea
+      <code>S<sub>j</sub></code>,
+      obținându-se un nou
+      element al
+      mulțimii <code>S</code>, ce va înlocui <code>S<sub>i</sub></code> şi <code>S<sub>j</sub></code>. <br>
+    </p>
+    <p>
+      Observații:<br>
+      1. &nbsp;&ensp; Această problemă este cunoscută şi sub denumirea de problema claselor de
+      echivalență (<code>x,y</code> se vor numi echivalente dacă aparțin aceleiaşi mulțimi
+      <code>S<sub>1</sub>&isin;S</code>, sau, altfel spus, <code>Find(x)=Find(y)</code>), conceptele de relatie de
+      echivalenta si
+      partiție reprezentând două abordări diferite ale aceleiaşi structuri matematice.<br>
+      2. &nbsp;&ensp; Dat fiind un graf neorientat, componentele conexe ale grafului constituie o partiție
+      a mulțimii vârfurilor grafului. Un algoritm de determinare a componentelor
+      conexe ale unui graf neorientat poate fi formulat cu ajutorul operațiilor Union-Find
+      astfel: <br>
+      Pentru &forall; i&isin;(1, 2, …, n), S<sub>i</sub> = {i}; <br>
+      Pentru &forall; [i, j] muchie în graf <br>
+      <span class="tab"></span> <span class="tab"></span> A=Find(i); B=Find(j); <br>
+      <span class="tab"></span> <span class="tab"></span> Dacă A&ne;B atunci Union(A, B); <br>
+    </p>
+
+    <div class="partitie-window" id="partitie-window">
+      <p class="partitie-paragraph">
+        În matematică, o partiție a unei mulțimi M este o mulțime de submulțimi nevide ale acesteia: <br>
+        -a căror reuniune acoperă mulțimea M <br>
+        -și care sunt disjuncte două câte două, adică intersecția oricăror două perechi de submulțimi
+        este vidă. <br>
+      </p>
+
+    </div>
+
+
+    <div class="example-window" id="example-window">
+      <button class="close-button" id="close-button">
+        X
+      </button>
+      <p class="example-paragraph">
+        <span class="tab"></span>Să considerăm n=10 și o partiție a mulțimii {1, 2, ..., 9, 10} formată din: <br>
+        S<sub>1</sub>={1, 7, 8, 9}, S<sub>2</sub>={2, 5, 10}, S<sub>3</sub>={3, 4, 6}. Partiția S={S<sub>1</sub>,
+        S<sub>2</sub>, S<sub>3</sub>} poate fi reprezentată ca o pădure
+        formată
+        din 3 arbori:
+      </p>
+      <section class="example-img-content">
+        <div class="example-img-container">
+          <img class="example-img" src="./images/ex-1.png">
+        </div>
+        <div class="example-img-container">
+          <img class="example-img" src="./images/ex-2.png">
+        </div>
+        <div class="example-img-container">
+          <img class=" example-img" src="./images/ex-3.png">
+        </div>
+      </section>
+    </div>
+
+    <button class="example-button" id="example-button">
+      Exemplu
+    </button>
+
+
+  </div>
+  <script src="./index-scripts/example-window.js"></script>
+  <script src="./index-scripts/partitie-window.js"></script>
+</body>
+
+</html>

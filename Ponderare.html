@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Reprezentarea mulțimilor disjuncte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./ponderare-styles/ponderare-styles.css">
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="title-header">
+      Reprezentarea mulțimilor disjuncte
+    </div>
+    <div class="menu-header">
+      <button class="button-menu-header-i" onclick="location.href='./Index.html'">Introducere</button>
+      <button class="button-menu-header-r" onclick="location.href='./Reprezentare.html'">Reprezentare</button>
+      <button class="button-menu-header-u" onclick="location.href='./Union.html'">Union</button>
+      <button class="button-menu-header-f" onclick="location.href='./Find.html'">Find</button>
+      <button class="button-menu-header-p" onclick="location.href='./Ponderare.html'">Ponderare</button>
+      <button class="button-menu-header-c" onclick="location.href='./Compresie.html'">Compresie</button>
+      <button class="button-menu-header-a" onclick="location.href='./Aplicatii.html'">Aplicații</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="content-left">
+      <p>Vector de tați:</p>
+      <div id="vector"></div>
+
+      <p>Vector de inălțimi:</p>
+      <div id="height"></div>
+
+      <button class="button" id='union' onclick="updateUnire()">Union</button>
+      <button class="button" id='reset' onclick="resetUnire()">Reset</button>
+
+      <p>Pasi Unire:</p>
+      <div id="unire"></div>
+      <div class="content-images">
+        <div class="image1">
+          <img id="image1" src="./images/Union/union-st1.png">
+        </div>
+        <div class="image2">
+          <img id="image2" src="./images/Union/union-st2.png">
+        </div>
+        <div class="image3">
+          <img id="image3" src="./images/Union/union-st3.png">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content-right">
+      <div class="text-window">
+        <textarea id="code"></textarea>
+      </div>
+
+      <div class="buttons-window">
+        <button class="button" id="run">Run</button>
+        <button class="button" id="pause">Pause</button>
+      </div>
+
+
+      <table id="vector">
+        <!-- Vector values will go here -->
+      </table>
+
+    </div>
+
+  </div>
+
+
+  <script src="./ponderare-scripts/vector-ponderare.js"></script>
+  <script src="./ponderare-scripts/window-ponderare.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+body {
+  font-family: Roboto, Arial;
+  margin: 0;
+  background-color: rgb(5, 5, 65);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+  body {
+    zoom: 70%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  body {
+    zoom: 80%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+  body {
+    zoom: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  body {
+    zoom: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  body {
+    zoom: 110%;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  body {
+    zoom: 120%;
+  }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+  body {
+    zoom: 130%;
+  }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 1800px) {
+  body {
+    zoom: 140%;
+  }
+}
+
+/* Styles for screens larger than 1600px */
+@media screen and (min-width: 1800px) {
+  body {
+    zoom: 150%;
+  }
+}
+
+
+.header {
+  margin: -1;
+  height: 55px;
+  border: 0;
+  border-bottom: 2px;
+  border-style: solid;
+  border-color: rgb(234, 187, 69);
+
+  /*box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);*/
+  padding-top: 10px;
+
+}
+
+.title-header {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: lightblue;
+}
+
+.menu-header {
+  height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.button-menu-header-i,
+.button-menu-header-r,
+.button-menu-header-u,
+.button-menu-header-f,
+.button-menu-header-p,
+.button-menu-header-c,
+.button-menu-header-a {
+  margin-top: -1px;
+  font-size: 20px;
+  height: 40px;
+  width: fit-content;
+  border: 0px;
+  background-color: rgb(5, 5, 65);
+  color: lightblue;
+}
+
+.button-menu-header-i {
+  background-color: rgb(234, 187, 69);
+  color: rgb(2, 39, 72);
+}
+
+.button-menu-header-r:hover,
+.button-menu-header-u:hover,
+.button-menu-header-f:hover,
+.button-menu-header-p:hover,
+.button-menu-header-c:hover,
+.button-menu-header-a:hover {
+  background-color: rgb(234, 187, 69);
+  opacity: 0.75;
+  color: rgb(2, 39, 72);
+  transition: background-color 0.15s;
+
+}
+
+.content {
+  margin: 50px;
+  position: relative;
+  margin-top: 100px;
+
+}
+
+p {
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: white;
+}
+
+.partitie-popup {
+  border: none;
+  background-color: rgb(5, 5, 65);
+  font-family: Roboto, Arial;
+  font-size: 17px;
+  color: white;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-top: 2px;
+  text-decoration-line: underline;
+}
+
+.partitie-window {
+  position: absolute;
+  top: 45px;
+  left: 450px;
+  height: 120px;
+  width: 450px;
+  background-color: rgb(214, 180, 95);
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+.partitie-paragraph {
+  font-size: 17px;
+  color: rgb(2, 39, 72);
+  padding-bottom: 30px;
+  margin: 10px;
+}
+
+.window-partitie-1 {
+  transition: opacity 0.3s;
+  opacity: 1;
+  z-index: 100;
+}
+
+.window-partitie-0 {
+  opacity: 0;
+  z-index: -100;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.example-window {
+  position: absolute;
+  top: 0px;
+  left: 185px;
+  height: 400px;
+  width: 700px;
+  background-color: rgb(214, 180, 95);
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+}
+
+.example-paragraph {
+  font-size: 20px;
+  color: rgb(2, 39, 72);
+  padding-bottom: 30px;
+}
+
+.example-img-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+}
+
+.example-img-container {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 150px;
+  width: 200px;
+}
+
+.example-img {
+  height: 180px;
+  padding-left: 10px;
+}
+
+.example-button {
+  margin-bottom: 100px;
+  color: white;
+  background-color: rgb(80, 114, 192);
+  background-color: #386692;
+  height: 30px;
+}
+
+.window-example-1 {
+  transition: opacity 0.3s;
+  opacity: 1;
+  z-index: 10;
+}
+
+.window-example-0 {
+  opacity: 1;
+  z-index: -10;
+}
+
+.close-button {
+  background-color: rgb(210, 69, 69);
+  color: black;
+  border: none;
+  position: absolute;
+  font-size: 14px;
+  top: 0px;
+  right: 0px;
+  padding: none;
+  height: 30px;
+  width: auto;
+  width: auto;
+  z-index: 1100;
+}
+
+.close-button:hover {
+  background-color: rgb(221, 60, 28);
+}
